@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localservice/views/addnew.dart';
 import 'package:localservice/widgets/featured_service_section.dart';
 import 'package:localservice/widgets/searchbar_widget.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +39,14 @@ class HomeView extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications_outlined),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AddServiceProviderPage(),
+                ),
+              );
+            },
           ),
         ],
       ),
